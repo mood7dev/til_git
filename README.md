@@ -252,4 +252,138 @@ git branch -v
 git merge 합쳐주고자 하는 브랜치명
 ```
 
+### 4.8. 깃 브랜치 충돌 해결해 보기
+
+- 깃 브랜치를 merge 하면 많이 발생합니다.
+
+git add .
+git commit -m "[docs] : 업무저장"
+
+==> login 업무를 전달합니다.
+
+git branch login
+gir branch -v
+
+=====
+main
+login
+나와야함
+=====
+
+- login 브랜치에서 나는 로그인 기능을 구현했다.
+
+git switch login
+git add .
+git commit -m "[feat] : 로그인기능"
+
+- 나는 main 에서 계속 작업을 하고 있었습니다.
+
+git switch main
+git add .
+git commit -m "[docs] : 내용 수정"
+
+git merge login
+
+Accept Both Changes >> 클릭 : main와 login 둘 다 저장함
+
+- `login 브랜치`에서 나는 로그인 기능을 구현했다.
+
+git add .
+git commit -m "[feat] : 로그인 기능 적용"
+
+git branch -D login
+
 # GitHub
+
+## 1. GitHub 회원가입하기
+
+- https://github.com
+
+## 2.GitHub 프로젝트(Repository) 생성하기
+
+- 만약 til_git 프로젝트 생성한다면 GitHub에도 동일하게 생성하자.
+
+- public 으로 셋팅 : 외부로 소스 공개
+
+- description 은 작성해 주자 : 프로젝트 설명
+
+## 3. GitHub 인증하기
+
+### 3.1. 무조건 GitHub 에 로그인 된 상태로 시도하셔야 합ㄴ디ㅏ.
+
+### 3.2. `윈도우 > 자격 증명 관리자 > Windows 자격 증명` 에서 gitHub 확인
+
+- 새로 생성하시길 권장합니다.
+  -PC 정리 또는 자리 이동시 반드시 삭제하셔야 합니다.
+
+## 4. GitHub 프로젝트 연결하기
+
+### 4.1. 원격 저장소 주소 지정하기
+
+- `remote` 는 원격(인터넷)을 말합니다.
+- `add` : 추가하라
+- `origin` 은 http 주소를 간략하게 별칭을 준 것입니다. (단어는 마음대로 하셔도 되요.)
+- `원격 이름`을 말함.
+
+```bash
+git remote add origin https://github.com/mood7dev/till_git.git
+```
+
+### 4.2. 원격 저장소 목록 보기
+
+```bash
+git remote -v
+```
+
+### 4.3. 원격 저장소에 소스 등록하기
+
+- 습관적으로 하셨으면 좋은 작업(ctrl + s)
+
+```bash
+git add .
+git commit -m "[docs]:최초등록"
+```
+
+- 소스 업로드를 push 한다라고 합니다.
+
+git push -u origin main
+
+- `u` 옵션을 붙이셨다면 이후로는 `git push` 하면 됨.
+
+### 4.4. 원격 저장소 관리하기
+
+- 목록보기
+
+```bash
+git remote -v
+```
+
+- 삭제하기
+
+```bash
+git remote remove 원격이름
+```
+
+- 추가하기
+
+```bash
+git remote add 원격이름 https주소
+```
+
+- 이름바꾸기
+
+```bash
+git remote rename 옛이름 새이름
+```
+
+---
+
+```
+git add .
+git commit -m "[docs]:깃학습"
+git push origin main
+```
+
+### 5. 깃허브의 소스를 다운로드 받아서 작업하는 법
+
+- 깃 주소를 주의하셔야 합니다.
