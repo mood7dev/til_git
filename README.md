@@ -218,13 +218,25 @@ git show 커밋아이디
 #### 4.7.1. 브랜치 생성하기
 
 ```bash
-git branch
+git add .
+git commit -m "[docs] : 브랜치 실습 test 생성하기"
+git branch test
 ```
 
-#### 4.7.2. 브랜치 이동하기
+#### 4.7.2. 브랜치 목록보기
 
-#### 4.7.3. 브랜치 삭제하기
+```bash
+git switch test
+```
 
-#### 4.7.4. 브랜치 합치기
+#### 4.7.3. 브랜치 이동하기
+
+```bash
+git switch test
+```
+
+#### 4.7.4. 브랜치 삭제하기
+
+#### 4.7.5. 브랜치 합치기
 
 # GitHub
