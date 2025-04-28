@@ -226,7 +226,7 @@ git branch test
 #### 4.7.2. 브랜치 목록보기
 
 ```bash
-git switch test
+git branch -v
 ```
 
 #### 4.7.3. 브랜치 이동하기
@@ -237,6 +237,19 @@ git switch test
 
 #### 4.7.4. 브랜치 삭제하기
 
+```bash
+git branch -d test
+- D 는 무조건 지우는 것
+git branch -v
+```
+
 #### 4.7.5. 브랜치 합치기
+
+- 브랜치를 하나로 합쳐주기
+- 주의 사항 : `main 브랜치에서 test 브랜치 합쳐줄 겁니다.`
+
+```bash
+git merge 합쳐주고자 하는 브랜치명
+```
 
 # GitHub
