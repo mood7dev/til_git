@@ -414,3 +414,14 @@ git add .
 git commit -m "작업내용"
 git push origin 브랜치명
 ```
+
+git fetch --all
+
+// 내 로컬 브랜치 목록
+git branch -v
+
+// 내 깃허브 리모트 브랜치 목록
+git branch -r
+
+// 로컬 및 깃허브 모든 브랜치 목록
+git branch -a
