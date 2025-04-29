@@ -384,6 +384,33 @@ git commit -m "[docs]:깃학습"
 git push origin main
 ```
 
-### 5. 깃허브의 소스를 다운로드 받아서 작업하는 법
+### 5. 깃허브의 소스를 복사(Clone) 받아서 작업하는 법
 
 - 깃 주소를 주의하셔야 합니다.
+- 코드 소스 기준은 `https`로 진행 중입니다.
+- 코드 소스 기준이 `ssh`면 인증을 다시 처리하는 과정 필요.
+
+### 5.1 실습
+
+- 서울로 출장을 갔다. (PC 없이)
+- 서울 사무소에 PC를 지급 받았다.
+- PC에 환경 설정 진행(VSCode, Git)
+- /stdent/`test` 폴더 생성
+- gitHub 사이트에 프로젝트를 `clone` 한다.
+
+### 5.2. clone
+
+```bash
+git clone 깃허브주소 .
+```
+
+```bash
+git status
+git branch -v
+git branch 브랜치명
+git switch 브랜치명
+작업진행
+git add .
+git commit -m "작업내용"
+git push origin 브랜치명
+```
