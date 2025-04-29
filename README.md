@@ -406,15 +406,29 @@ git clone 깃허브주소 .
 
 ```bash
 git status
+```
+
+```bash
 git branch -v
+```
+
+```bash
 git branch 브랜치명
 git switch 브랜치명
+```
+
 작업진행
+
+```bash
 git add .
 git commit -m "작업내용"
+```
+
+```bash
 git push origin 브랜치명
 ```
 
+<<<<<<< HEAD
 git fetch --all
 
 // 내 로컬 브랜치 목록
@@ -427,3 +441,34 @@ git branch -r
 git branch -a
 
 지금 대구
+=======
+### 5.4. git push 이후 작업
+
+- jeju 폴더는 clone을 하여 진행함.
+- `til_git 폴더는 clone 을 할 필요가 있을까요?`
+- til_git 은 이미 git 셋팅이 되어 있다. 그래서 clone은 필요 없다.
+
+### 5.5. 기존 프로젝트에서 GitHub 브랜치 적용하기
+
+- 기존 프로젝트에서는 clone 하지 않음
+- 기존 프로젝트에서는 fetch 사용
+- fetch 는 깃허브에서 모든 브랜치 가져옮
+
+```bash
+git fetch -all
+```
+
+- 2. 브랜치 목록보기 (전체 즉, 로컬과 깃허브 브랜치 모두)
+
+```bash
+git branch -a
+```
+
+- 3. `새롭게 작업한 깃허브 브랜치`를 `로컬 브랜치 생성하면서 즉시 만들어서 작업` 하기
+
+```bash
+git switch --track -c 생성브랜치명 원격브랜치명
+```
+
+- 예) `git switch --track -c jeju remotes/origin/seoul`
+>>>>>>> 2b8b4c292cf3c8c60d6eeb47bb473c4d4bd0f0f9
